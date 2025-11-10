@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mySpot</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css">
 </head>
 <body>
 
@@ -33,4 +34,113 @@
             </div>
         </nav>
     </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Find Your <span>Perfect Spot</span></h1>
+            <p>Discover unique stays and experiences around the world. Your next adventure is just a click away.</p>
+            <a href="#places" class="hero-cta">
+                Explore Now
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+
+        <div class="hero-blob-container">
+            <div class="blob blob-1"></div>
+            <div class="blob blob-2"></div>
+            <div class="blob blob-3"></div>
+            <div class="blob blob-4"></div>
+            
+            <div class="hero-carousel">
+                <button class="carousel-btn prev-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M15 18l-6-6 6-6"/>
+                    </svg>
+                </button>
+                
+                <div class="carousel-track">
+                    <div class="apartment-card active">
+                        <div class="apartment-image">
+                            <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop" alt="Modern Loft">
+                        </div>
+                        <div class="apartment-info">
+                            <div class="apartment-location">Prishtine, Kosova</div>
+                            <h3>Dukagjini Residence</h3>
+                            <div class="apartment-details">
+                                <span class="apartment-price">$39<small>/night</small></span>
+                                <span class="apartment-rating">⭐ 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-image">
+                            <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=400&h=300&fit=crop" alt="Cozy Studio">
+                        </div>
+                        <div class="apartment-info">
+                            <div class="apartment-location">Prishtine, Kosove</div>
+                            <h3>Rruga B Apartment,<br>(no wifi 😭)</h3>
+                            <div class="apartment-details">
+                                <span class="apartment-price">$15<small>/night</small></span>
+                                <span class="apartment-rating">⭐ 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-image">
+                            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop" alt="Beach House">
+                        </div>
+                        <div class="apartment-info">
+                            <div class="apartment-location">Malibu, USA</div>
+                            <h3>Beachfront Paradise</h3>
+                            <div class="apartment-details">
+                                <span class="apartment-price">$250<small>/night</small></span>
+                                <span class="apartment-rating">⭐ 5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-image">
+                            <img src="https://images.unsplash.com/photo-1536376072261-38c75010e6c9?w=400&h=300&fit=crop" alt="City View">
+                        </div>
+                        <div class="apartment-info">
+                            <div class="apartment-location">Tokyo, Japan</div>
+                            <h3>Skyline View Apartment</h3>
+                            <div class="apartment-details">
+                                <span class="apartment-price">$180<small>/night</small></span>
+                                <span class="apartment-rating">⭐ 4.7</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="apartment-card">
+                        <div class="apartment-image">
+                            <img src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=400&h=300&fit=crop" alt="Mountain Cabin">
+                        </div>
+                        <div class="apartment-info">
+                            <div class="apartment-location">Swiss Alps</div>
+                            <h3>Mountain Retreat Cabin</h3>
+                            <div class="apartment-details">
+                                <span class="apartment-price">$145<small>/night</small></span>
+                                <span class="apartment-rating">⭐ 4.9</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn next-btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 18l6-6-6-6"/>
+                    </svg>
+                </button>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="scripts/main.js"></script>
+</body>
 </html>
