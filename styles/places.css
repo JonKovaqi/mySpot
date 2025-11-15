@@ -1,0 +1,359 @@
+
+.filter-section {
+    padding: 2rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 150px;
+}
+
+.filter-bar {
+    display: flex;
+    align-items: stretch;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0.5rem;
+    border-radius: 50px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    gap: 0;
+    max-width: 900px;
+    width: 100%;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.filter-bar:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.filter-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    flex: 1;
+    min-width: 0;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: all 0.2s ease;
+    margin: 0.25rem;
+}
+
+.filter-item:hover {
+    background-color: #f7f7f7;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-item label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0.25rem;
+}
+
+.filter-item input {
+    border: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #717171;
+    outline: none;
+    cursor: pointer;
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    max-width: 100%;
+}
+
+.filter-item input::placeholder {
+    color: #717171;
+}
+
+.filter-item svg {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #222222;
+    flex-shrink: 0;
+}
+
+.filter-divider {
+    width: 1px;
+    height: 36px;
+    background-color: rgba(0, 0, 0, 0.08);
+    align-self: center;
+}
+
+.search-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 3rem;
+    background: linear-gradient(135deg, #FF385C 0%, #E31C5F 100%);
+    color: white;
+    border: none;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: "Montserrat", sans-serif;
+    margin-left: 0.5rem;
+}
+
+.search-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 56, 92, 0.4);
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+@media (max-width: 950px) {
+    .filter-section {
+        padding: 2rem 1.5rem;
+    }
+    
+    .filter-bar {
+        padding: 0.5rem 0.5rem 0.5rem 1.5rem;
+        max-width: 100%;
+    }
+    
+    .filter-item {
+        padding: 0.5rem 1rem;
+    }
+    
+    .filter-item svg {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .filter-section {
+        padding: 1.5rem 1rem;
+    }
+    
+    .filter-bar {
+        flex-direction: column;
+        padding: 1.5rem;
+        border-radius: 24px;
+        gap: 0;
+    }
+    
+    .filter-item {
+        width: 100%;
+        padding: 1rem;
+        border-radius: 12px;
+    }
+    
+    .filter-item label {
+        font-size: 0.85rem;
+    }
+    
+    .filter-item input {
+        font-size: 1rem;
+    }
+    
+    .filter-divider {
+        width: 100%;
+        height: 1px;
+        margin: 0.5rem 0;
+    }
+    
+    .search-button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 0.5rem;
+        padding: 1rem;
+    }
+}
+
+
+.spots-section {
+    padding: 3rem 6rem;
+}
+
+.section-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222222;
+    text-align: center;
+}
+
+.section-header h2 span {
+    background: linear-gradient(135deg, #FF385C 0%, #E31C5F 50%, #BD1E59 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.view-all {
+    display: none;
+}
+
+.view-all:hover {
+    color: #FF385C;
+}
+
+.spots-row {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.spot-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    border: 1px solid #ebebeb;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.spot-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+    border-color: #FF385C;
+}
+
+.spot-image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.spot-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.spot-card:hover .spot-image img {
+    transform: scale(1.05);
+}
+
+.spot-info {
+    padding: 1.25rem;
+}
+
+.spot-location {
+    font-size: 0.85rem;
+    color: #717171;
+    margin-bottom: 0.5rem;
+}
+
+.spot-info h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+}
+
+.spot-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spot-price {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #222222;
+}
+
+.spot-price small {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #717171;
+}
+
+.spot-rating {
+    font-size: 0.9rem;
+    color: #222222;
+}
+
+/* Search Results Grid */
+.search-results {
+    padding: 3rem 6rem;
+}
+
+.results-header {
+    margin-bottom: 2rem;
+}
+
+.results-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 0.5rem;
+}
+
+.results-header p {
+    font-size: 1rem;
+    color: #717171;
+}
+
+.results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+
+@media (max-width: 950px) {
+    .spots-section,
+    .search-results {
+        padding: 2rem 1.5rem;
+    }
+    
+    .section-header h2,
+    .results-header h2 {
+        font-size: 1.75rem;
+    }
+    
+    .spots-row,
+    .results-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .spots-section,
+    .search-results {
+        padding: 2rem 1rem;
+    }
+    
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .section-header h2,
+    .results-header h2 {
+        font-size: 1.5rem;
+    }
+    
+    .spots-row,
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
