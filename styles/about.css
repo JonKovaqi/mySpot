@@ -1,0 +1,143 @@
+body {
+  background: linear-gradient(135deg, #ffffff 0%, #ffcdcd 100%);
+}
+.banner {
+  padding: 96px 40px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.7fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 32px;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: saturate(140%) blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(26, 39, 68, 0.06);
+}
+
+.banner-label {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e31c5f;
+}
+
+.banner-title {
+  font-size: 56px;
+  font-weight: 800;
+  color: #0f172a;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.banner-description {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 56ch;
+}
+
+.banner-cta {
+  background: linear-gradient(135deg, #ff385c 0%, #e31c5f 100%);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+  width: fit-content;
+  box-shadow: 0 10px 20px rgba(227, 28, 95, 0.25);
+}
+
+.banner-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 32px rgba(227, 28, 95, 0.35);
+}
+
+.banner-visual {
+  position: relative;
+  height: 420px;
+}
+
+.banner-shape {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.12;
+  filter: blur(4px);
+}
+
+.banner-shape-1 {
+  width: 360px;
+  height: 360px;
+  background: linear-gradient(135deg, #ff385c 0%, #e31c5f 100%);
+  top: 24px;
+  right: -40px;
+  border-radius: 48% 52% 50% 50% / 54% 45% 55% 46%;
+}
+
+.banner-shape-2 {
+  width: 220px;
+  height: 220px;
+  background: radial-gradient(
+    circle at 30% 30%,
+    #ff385c 0%,
+    #e31c5f 60%,
+    rgba(227, 28, 95, 0.85) 100%
+  );
+  bottom: -30px;
+  right: 120px;
+  border-radius: 46% 54% 50% 50% / 50% 45% 55% 50%;
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 72px 20px;
+  }
+
+  .banner-content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .banner-title {
+    font-size: 34px;
+  }
+
+  .banner-description {
+    font-size: 16px;
+  }
+
+  .banner-visual {
+    height: 280px;
+  }
+
+  .banner-shape-1 {
+    width: 220px;
+    height: 220px;
+    right: 0px;
+  }
+
+  .banner-shape-2 {
+    width: 140px;
+    height: 140px;
+    right: 140px;
+  }
+}
