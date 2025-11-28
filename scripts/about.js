@@ -72,3 +72,37 @@ if (faqItems.length) {
     });
   });
 }
+const timelineItems = document.querySelectorAll(".timeline-item");
+if (timelineItems.length && "IntersectionObserver" in window) {
+  const activeObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    },
+    { root: null, threshold: 0.6 }
+  );
+  timelineItems.forEach((item) => activeObserver.observe(item));
+}
+const prefersReduced = window.matchMedia(
+  "(prefers-reduced-motion: reduce)"
+).matches;
+const revealEls = document.querySelectorAll(".reveal");
+if (revealEls.length && !prefersReduced && "IntersectionObserver" in window) {
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { root: null, threshold: 0.12 }
+  );
+  revealEls.forEach((el) => revealObserver.observe(el));
+}
