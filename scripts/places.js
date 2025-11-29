@@ -1,5 +1,5 @@
 
-
+// nje lloj si databaze per apartamente
 const allApartments = [
     
     { id: 1, location: "Prishtina", name: "Dukagjini Residence", city: "Prishtina, Kosovo", price: 39, rating: 4.9, image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=400&h=300&fit=crop" },
@@ -33,6 +33,8 @@ const resultsGrid = document.getElementById('results-grid');
 const resultsTitle = document.getElementById('results-title');
 const resultsCount = document.getElementById('results-count');
 
+
+// performon nje search per places.html nje funksion 
 function performSearch() {
     const searchTerm = whereInput.value.toLowerCase().trim();
     
@@ -95,7 +97,7 @@ function performSearch() {
     });
 }
 
-
+//event listeners per places.js
 searchButton.addEventListener('click', performSearch);
 
 whereInput.addEventListener('keypress', (e) => {
