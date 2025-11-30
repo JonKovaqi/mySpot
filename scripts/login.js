@@ -7,7 +7,7 @@ const togglePassword = document.getElementById('togglePassword');
 
 
 const passwordMinLength = 8;
-
+// perdorimi i svgs per ikona me qualitet
 togglePassword.addEventListener('click', () => {
     const type = passwordInput.type === 'password' ? 'text' : 'password';
     passwordInput.type = type;
@@ -27,7 +27,7 @@ togglePassword.addEventListener('click', () => {
     }
 });
 
-
+// validim per email
 function validateEmail(email) {
     if (!email.trim()) {
         return 'Email is required';
@@ -64,7 +64,7 @@ function validateEmail(email) {
     return '';
 }
 
-
+// validim per password , duhet me pas vetem numra dhe gjatesi
 function validatePassword(password) {
     if (!password) {
         return 'Password is required';
@@ -180,7 +180,7 @@ loginForm.addEventListener('submit', (e) => {
         showSuccess(passwordInput, passwordError);
     }
     
-    
+    // nese eshte valid ateher krijo formData
     if (isValid) {
         
         const formData = {
@@ -190,7 +190,7 @@ loginForm.addEventListener('submit', (e) => {
         };
         
         
-        console.log('Login attempt:', { email: formData.email, remember: formData.remember });
+        console.log('Login attempted');
         
         
         window.location.href = 'Places.html';
