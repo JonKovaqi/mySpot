@@ -56,15 +56,12 @@ function performSearch() {
         locationFilter = "New York";
     }
      else {
-        
         filteredApartments = allApartments;
         locationFilter = "All";
     }
     
-    
     defaultView.style.display = 'none';
     searchView.style.display = 'block';
-    
     
     if (locationFilter === "All") {
         resultsTitle.textContent = "All Spots";
@@ -73,7 +70,6 @@ function performSearch() {
         resultsTitle.textContent = `Spots in ${locationFilter}`;
         resultsCount.textContent = `Showing ${filteredApartments.length} properties in ${locationFilter}`;
     }
-    
     
     resultsGrid.innerHTML = '';
     

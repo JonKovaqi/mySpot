@@ -5,7 +5,6 @@ const emailError = document.getElementById('emailError');
 const passwordError = document.getElementById('passwordError');
 const togglePassword = document.getElementById('togglePassword');
 
-
 const passwordMinLength = 8;
 // perdorimi i svgs per ikona me qualitet
 togglePassword.addEventListener('click', () => {
@@ -33,28 +32,23 @@ function validateEmail(email) {
         return 'Email is required';
     }
     
-    
     if (!email.includes('@')) {
         return 'Email must contain @';
     }
-    
     
     const atIndex = email.indexOf('@');
     if (atIndex === 0) {
         return 'Email must have text before @';
     }
     
-    
     const afterAt = email.substring(atIndex + 1);
     if (afterAt.length === 0) {
         return 'Email must have text after @';
     }
     
-    
     if (!afterAt.includes('.')) {
         return 'Email must contain a domain (e.g., .com)';
     }
-    
     
     const lastDotIndex = afterAt.lastIndexOf('.');
     if (lastDotIndex === afterAt.length - 1) {
@@ -74,7 +68,6 @@ function validatePassword(password) {
         return `Password must be at least ${passwordMinLength} characters`;
     }
     
-    
     let hasNumber = false;
     for (let i = 0; i < password.length; i++) {
         if (password[i] >= '0' && password[i] <= '9') {
@@ -85,7 +78,6 @@ function validatePassword(password) {
     if (!hasNumber) {
         return 'Password must contain at least one number';
     }
-    
     
     let hasLetter = false;
     for (let i = 0; i < password.length; i++) {
@@ -102,13 +94,11 @@ function validatePassword(password) {
     return '';
 }
 
-
 function showError(input, errorElement, message) {
     errorElement.textContent = message;
     input.classList.add('error');
     input.classList.remove('success');
 }
-
 
 function showSuccess(input, errorElement) {
     errorElement.textContent = '';
@@ -116,12 +106,10 @@ function showSuccess(input, errorElement) {
     input.classList.add('success');
 }
 
-
 function clearValidation(input, errorElement) {
     errorElement.textContent = '';
     input.classList.remove('error', 'success');
 }
-
 
 emailInput.addEventListener('blur', () => {
     const error = validateEmail(emailInput.value);
@@ -154,16 +142,13 @@ passwordInput.addEventListener('input', () => {
     }
 });
 
-
 loginForm.addEventListener('submit', (e) => {
     e.preventDefault();
-    
     
     const emailErrorMsg = validateEmail(emailInput.value);
     const passwordErrorMsg = validatePassword(passwordInput.value);
     
     let isValid = true;
-    
     
     if (emailErrorMsg) {
         showError(emailInput, emailError, emailErrorMsg);
@@ -171,7 +156,6 @@ loginForm.addEventListener('submit', (e) => {
     } else {
         showSuccess(emailInput, emailError);
     }
-    
     
     if (passwordErrorMsg) {
         showError(passwordInput, passwordError, passwordErrorMsg);
@@ -182,16 +166,13 @@ loginForm.addEventListener('submit', (e) => {
     
     // nese eshte valid ateher krijo formData
     if (isValid) {
-        
         const formData = {
             email: emailInput.value,
             password: passwordInput.value,
             remember: document.getElementById('remember').checked
         };
         
-        
         console.log('Login attempted');
-        
         
         window.location.href = 'Places.html';
         

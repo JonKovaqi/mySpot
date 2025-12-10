@@ -1,4 +1,4 @@
-/* Footer */
+
 .footer {
     background: #222222;
     color: #ffffff;
@@ -109,7 +109,7 @@
     color: #b8b8b8;
 }
 
-/* Responsive */
+
 @media (max-width: 950px) {
     .footer-logo {
         margin-left: 32px;

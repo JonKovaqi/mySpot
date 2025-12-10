@@ -413,7 +413,7 @@ body {
   box-shadow: 0 10px 20px rgba(227, 28, 95, 0.18);
 }
 
-/* Modal */
+
 .team-modal[hidden] {
   display: none !important;
 }
@@ -693,20 +693,20 @@ body {
 }
 
 .faq-icon::before {
-  /* vertical line */
+ 
   width: 2px;
   height: 12px;
 }
 
 .faq-icon::after {
-  /* horizontal line */
+
   width: 12px;
   height: 2px;
 }
 
 .faq-item.open .faq-icon::before {
   transform: rotate(90deg);
-  opacity: 0; /* turn plus into minus */
+  opacity: 0; 
 }
 
 .faq-text {
@@ -718,7 +718,7 @@ body {
 }
 
 .faq-answer {
-  padding: 0 20px 18px 60px; /* indent under icon for visual alignment */
+  padding: 0 20px 18px 60px; 
   color: #4b5563;
   line-height: 1.75;
   opacity: 0;

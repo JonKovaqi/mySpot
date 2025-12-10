@@ -68,7 +68,7 @@
     transform: translateX(5px);
 }
 
-/* Right Side - Blob Container */
+
 .hero-blob-container {
     flex: 1;
     display: flex;
@@ -78,7 +78,7 @@
     height: 500px;
 }
 
-/* Animated Gradient Blobs */
+
 .blob {
     position: absolute;
     border-radius: 50%;
@@ -127,7 +127,7 @@
     animation-duration: 9s;
 }
 
-/* Blob Animation */
+
 @keyframes blob-float {
     0%, 100% {
         transform: translate(0, 0) scale(1);
@@ -147,7 +147,7 @@
     }
 }
 
-/* Glass card overlay on blob */
+
 .hero-carousel {
     position: relative;
     z-index: 2;
@@ -163,7 +163,7 @@
     height: 420px;
 }
 
-/* Apartment Card Styles */
+
 .apartment-card {
     position: absolute;
     top: 0;
@@ -265,7 +265,7 @@
     border-radius: 20px;
 }
 
-/* Carousel Buttons */
+
 .carousel-btn {
     width: 52px;
     height: 52px;
@@ -293,7 +293,7 @@
     transform: scale(0.95);
 }
 
-/* Progress Bar */
+
 .progress-bar {
     position: absolute;
     bottom: -30px;
@@ -315,7 +315,7 @@
     will-change: width;
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
     .hero {
         flex-direction: column;
@@ -553,7 +553,7 @@
     color: #717171;
 }
 
-/* Reviews Section */
+
 .reviews {
     padding: 6rem 6rem;
     background: #ffffff;
@@ -649,7 +649,7 @@
     color: #717171;
 }
 
-/* Footer */
+
 .footer {
     background: #222222;
     color: #ffffff;

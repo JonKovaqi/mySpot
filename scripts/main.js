@@ -19,7 +19,6 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
-
 const cards = document.querySelectorAll('.apartment-card');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
@@ -31,27 +30,21 @@ let progressInterval = null;
 let progressAnimationFrame = null;
 const autoSlideDelay = 4000; // 4 sekonda per slide
 
-
 function updateCarousel(newIndex, direction) {
-    
     if (newIndex >= cards.length) {
         newIndex = 0;
     } else if (newIndex < 0) {
         newIndex = cards.length - 1;
     }
     
-    
     cards.forEach(card => {
         card.classList.remove('active', 'prev');
     });
     
-    
     cards[newIndex].classList.add('active');
-    
     
     currentIndex = newIndex;
     
-  
     resetProgress();
 }
 
@@ -130,7 +123,6 @@ nextBtn.addEventListener('click', (e) => {
     resetAutoSlide();
 });
 
-
 const carousel = document.querySelector('.hero-carousel');
 carousel.addEventListener('mouseenter', (e) => {
     e.preventDefault(e);
@@ -143,7 +135,6 @@ carousel.addEventListener('mouseleave', (e) => {
     startAutoSlide();
     startProgress();
 });
-
 
 startAutoSlide();
 startProgress();
