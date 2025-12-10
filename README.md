@@ -35,9 +35,10 @@ mySpot/
 ├── styles/              # CSS
 └── assets/              # Imazhe & ikona
 ```
+## 👥 Autori
 
-## Autori
-
-[JonKovaqi](https://github.com/JonKovaqi)
-[DijarBajrami6](https://github.com/DijarBajrami6)
-[BledarTerbunja](https://github.com/BledarTerbunja)
+| Emri | GitHub | Email |
+|------|--------|-------|
+| Jon Kovaqi | [@JonKovaqi](https://github.com/JonKovaqi) | jk73270@ubt-uni.net |
+| Dijar Bajrami | [@DijarBajrami6](https://github.com/DijarBajrami6) | db736862@ubt-uni.net |
+| Bledar Terbunja | [@BledarTerbunja](https://github.com/BledarTerbunja) | bt72814@ubt-uni.net |
