@@ -1,6 +1,7 @@
 # mySpot
 
-Linku per website : https://my-spot-sooty.vercel.app/index.html
+## Linku per website : https://my-spot-sooty.vercel.app/index.html
+
 mySpot është një platformë për rezervimin e akomodimeve, e ngjashme me Airbnb. Ndërtuar me HTML, CSS dhe JavaScript.
 
 ## Karakteristikat
